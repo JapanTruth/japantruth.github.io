@@ -1,0 +1,1 @@
+# japantruth.github.io
