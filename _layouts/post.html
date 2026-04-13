@@ -8,4 +8,14 @@ layout: default
     <p class="meta">{{ page.date | date: "%Y年%m月%d日" }}</p>
   </div>
   {{ content }}
+  
+  <!-- Xシェアボタン -->
+  <div class="share-section">
+    <p class="share-label">この記事をシェアする</p>
+    <a class="share-button" 
+       href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via=JapanTruth" 
+       target="_blank">
+      𝕏 でシェア
+    </a>
+  </div>
 </div>
