@@ -274,3 +274,35 @@ footer p {
     grid-template-columns: 1fr;
   }
 }
+/* シェアボタン */
+.share-section {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.share-label {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.share-button {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.share-button:hover {
+  background: #cc0000;
+}
