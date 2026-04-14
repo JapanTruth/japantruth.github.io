@@ -1,18 +1,24 @@
 ---
-layout: page
-title: About
+layout: default
+title: 私達について
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<div class="post-content">
+  <div class="post-header">
+    <h1>私達について</h1>
+  </div>
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+  <h2>なぜJapanTruthを始めたのか</h2>
+  <p>日本のメディアは、権力や広告主への忖度によって、伝えるべき事実が歪められていると感じてきた。海外では当たり前に報じられているニュースが、日本語では存在しないかのように扱われる。そのギャップを埋めるために、このメディアを立ち上げた。</p>
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+  <h2>理念・ミッション</h2>
+  <p>JapanTruthは、国内外の一次情報をバイアスなく日本語で届けることを使命とする独立メディアだ。特定の政党、企業、イデオロギーに属さない。広告収入に依存しない。事実だけを伝える。</p>
 
+  <h2>これから</h2>
+  <p>まずは記事の数を増やし、信頼できる情報源としての実績を積み上げていく。将来的には読者が直接支援できる仕組みを強化し、完全に独立した報道機関として成長させていきたい。</p>
 
-[jekyll-organization]: https://github.com/jekyll
+  <h2>透明性について</h2>
+  <p>運営者は匿名だが、サイトの情報はすべて公開する。アクセス数、記事数、更新頻度——隠すものは何もない。誰もがこのメディアの活動を確認できるようにすることが、独立メディアとしての責任だと考えている。</p>
+
+</div>
