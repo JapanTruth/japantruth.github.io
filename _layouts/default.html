@@ -8,9 +8,12 @@
 </head>
 <body>
 
-  <header>
+ <header>
+  <div class="header-top">
     <a class="site-title" href="/">Japan<span>Truth</span></a>
-    <nav>
+    <span class="header-date">{{ site.time | date: "%Y年%m月%d日" }}</span>
+  </div>
+   <nav>
       <a href="/">最新</a>
       <a href="/categories/politics/">政治</a>
       <a href="/categories/economy/">経済</a>
