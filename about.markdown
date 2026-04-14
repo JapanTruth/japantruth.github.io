@@ -6,7 +6,6 @@ permalink: /about/
 
 <div class="post-content">
   <div class="post-header">
-    <h1>私達について</h1>
   </div>
 
   <h2>なぜJapanTruthを始めたのか</h2>
