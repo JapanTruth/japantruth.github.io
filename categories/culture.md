@@ -4,7 +4,7 @@ title: 文化
 permalink: /categories/culture/
 ---
 
-<h1>文化</h1>
+<h1></h1>
 
 {% for post in site.categories.culture %}
   <div>
