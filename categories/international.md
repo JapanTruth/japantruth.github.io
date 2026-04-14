@@ -4,7 +4,7 @@ title: 国際
 permalink: /categories/international/
 ---
 
-<h1>国際</h1>
+<h1></h1>
 
 {% for post in site.categories.international %}
   <div>
