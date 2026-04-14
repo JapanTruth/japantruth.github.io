@@ -4,7 +4,7 @@ title: 投資
 permalink: /categories/investment/
 ---
 
-<h1>投資</h1>
+<h1></h1>
 
 {% for post in site.categories.investment %}
   <div>
