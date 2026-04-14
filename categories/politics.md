@@ -4,7 +4,7 @@ title: 政治
 permalink: /categories/politics/
 ---
 
-<h1>政治</h1>
+<h1></h1>
 
 {% for post in site.categories.politics %}
   <div>
