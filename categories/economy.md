@@ -4,7 +4,7 @@ title: 経済
 permalink: /categories/economy/
 ---
 
-<h1>経済</h1>
+<h1></h1>
 
 {% for post in site.categories.economy %}
   <div>
