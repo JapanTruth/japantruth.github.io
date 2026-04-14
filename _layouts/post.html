@@ -13,7 +13,7 @@ layout: default
   <div class="share-section">
     <p class="share-label">この記事をシェアする</p>
     <a class="share-button" 
-       href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via=JapanTruth" 
+       href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url | append: page.url | url_encode }}&via=JapanTruth" 
        target="_blank">
       𝕏 でシェア
     </a>
