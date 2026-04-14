@@ -4,10 +4,24 @@ title: 経済
 permalink: /categories/economy/
 ---
 
-<h1></h1>
+<h1 class="section-label">経済</h1>
 
-{% for post in site.categories.economy %}
-  <div>
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  </div>
-{% endfor %}
+<ul class="post-list">
+  {% for post in site.categories.economy %}
+    <li class="post-card">
+
+      <div class="post-date">
+        {{ post.date | date: "%Y.%m.%d" }}
+      </div>
+
+      <h2>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h2>
+
+      <p class="excerpt">
+        {{ post.excerpt | strip_html | truncate: 120 }}
+      </p>
+
+    </li>
+  {% endfor %}
+</ul>
