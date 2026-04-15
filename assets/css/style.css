@@ -306,3 +306,10 @@ footer p {
 .share-button:hover {
   background: #cc0000;
 }
+/* 記事内の画像 */
+.post-content img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
