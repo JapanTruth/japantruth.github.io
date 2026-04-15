@@ -2,10 +2,10 @@
 layout: post
 title: "JapanTruthについて――権力に屈しない独立メディアの誕生"
 categories: politics
-image: /assets/images/Jt.png
+image: /assets/images/japantruth.png
 date: 2026-04-13
 ---
-![JapanTruth](/assets/images/Jt.png)
+![JapanTruth](/assets/images/japantruth.png)
 
 ## なぜこのメディアを作ったか
 
