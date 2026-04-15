@@ -19,5 +19,6 @@ permalink: /about/
 
   <h2>透明性について</h2>
   <p>運営者は匿名だが、サイトの情報はすべて公開する。アクセス数、記事数、更新頻度——隠すものは何もない。誰もがこのメディアの活動を確認できるようにすることが、独立メディアとしての責任だと考えている。</p>
+  <p><a href="https://umami-k7cetfbjq-japantruths-projects.vercel.app/share/BYMYnvdunH5Lgpgp" target="_blank">→ アクセス数をリアルタイムで確認する</a></p>
 
 </div>
