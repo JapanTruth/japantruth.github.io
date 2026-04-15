@@ -6,3 +6,4 @@ baseurl: ""
 github_username: JapanTruth
 plugins:
   - jekyll-sitemap
+  - jekyll-feed
