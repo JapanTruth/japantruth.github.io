@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "JapanTruthについて――権力に屈しない独立メディアの誕生"
+image: /assets/images/Jt.png
 date: 2026-04-13
 ---
 
