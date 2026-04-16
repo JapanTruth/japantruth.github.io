@@ -7,3 +7,4 @@ github_username: JapanTruth
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+timezone: Asia/Tokyo
