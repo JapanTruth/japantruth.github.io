@@ -7,7 +7,7 @@ layout: default
     {% if post.image %}
     <img src="{{ post.image }}" alt="{{ post.title }}">
     {% endif %}
-    <p class="post-date">{{ post.date | date: "%Y年%m月%d日" }}</p>
+    <p class="post-date">{{ post.date | date: "%Y年%m月%d日 %H:%M" }}</p>
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <p class="excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</p>
   </li>
