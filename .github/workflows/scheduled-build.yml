@@ -1,0 +1,18 @@
+name: Scheduled Build
+
+on:
+  schedule:
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Trigger GitHub Pages rebuild
+        run: |
+          git config user.name "JapanTruth"
+          git config user.email "action@github.com"
+          git commit --allow-empty -m "Scheduled rebuild"
+          git push
