@@ -25,9 +25,9 @@ layout: default
     <p class="paywall-lock">🔒</p>
     <p class="paywall-title">この記事はプレミアム会員限定です</p>
     <p class="paywall-subtitle">JapanTruth Premiumに加入すると全文を読むことができます</p>
-    <a class="premium-button" href="https://app.unlock-protocol.com/checkout?id=45f1c52a-99b6-4ec9-b699-3cc0bebbd204" target="_blank">
+    <button class="premium-button" onclick="window.unlockProtocol && window.unlockProtocol.loadCheckoutModal()">
       プレミアム会員になる — 月額5 USDC
-    </a>
+    </button>
   </div>
   <script>
     var unlockProtocolConfig = {
@@ -37,7 +37,10 @@ layout: default
         }
       },
       pessimistic: true,
-      skipRecipient: true
+      skipRecipient: true,
+      callToAction: {
+        default: 'JapanTruth Premiumに加入して限定記事を読む'
+      }
     }
     document.getElementById('paywall-message').style.display = 'block';
     window.addEventListener('unlockProtocol.status', function(e) {
