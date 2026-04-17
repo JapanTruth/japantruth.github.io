@@ -357,3 +357,30 @@ footer p {
 .premium-button:hover {
   background: #aa0000;
 }
+/* ペイウォール */
+.paywall-section {
+  background: #1a1a1a;
+  border: 2px solid #cc0000;
+  padding: 50px 40px;
+  text-align: center;
+  margin: 40px 0;
+  border-radius: 4px;
+}
+
+.paywall-lock {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.paywall-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.paywall-subtitle {
+  color: #aaaaaa;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
