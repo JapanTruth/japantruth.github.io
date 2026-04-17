@@ -384,3 +384,24 @@ footer p {
   font-size: 0.9rem;
   margin-bottom: 25px;
 }
+.paywall-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.connect-button {
+  background: #ffffff;
+  color: #1a1a1a;
+  border: 2px solid #ffffff;
+  padding: 15px 40px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.connect-button:hover {
+  background: #eeeeee;
+}
