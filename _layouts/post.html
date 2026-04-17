@@ -16,13 +16,12 @@ layout: default
       {% endif %}
     </p>
   </div>
-
   {% if page.premium %}
   <!-- プレミアム記事のペイウォール -->
   <div id="premium-content" style="display:none;">
     {{ content }}
   </div>
-  <div id="paywall-message" class="paywall-section">
+  <div id="paywall-message" class="paywall-section" style="display:block;">
     <p class="paywall-lock">🔒</p>
     <p class="paywall-title">この記事はプレミアム会員限定です</p>
     <p class="paywall-subtitle">JapanTruth Premiumに加入すると全文を読むことができます</p>
@@ -40,6 +39,7 @@ layout: default
       pessimistic: true,
       skipRecipient: true
     }
+    document.getElementById('paywall-message').style.display = 'block';
     window.addEventListener('unlockProtocol.status', function(e) {
       if (e.detail.state === 'unlocked') {
         document.getElementById('premium-content').style.display = 'block';
@@ -60,7 +60,6 @@ layout: default
   {% else %}
   {{ content }}
   {% endif %}
-
   <!-- Xシェアボタン -->
   <div class="share-section">
     <p class="share-label">この記事をシェアする</p>
