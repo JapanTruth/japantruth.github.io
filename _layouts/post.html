@@ -30,20 +30,6 @@ layout: default
     </button>
   </div>
   <script>
-    var unlockProtocolConfig = {
-      locks: {
-        '0xaD740e0476baf6336d4ac88c4ae322a58b327e75': {
-          network: 8453,
-          name: 'JapanTruth Premium'
-        }
-      },
-      skipRecipient: true,
-      title: 'JapanTruth Premium',
-      icon: 'https://japantruth.github.io/assets/images/japantruth-nft.png',
-      callToAction: {
-        default: 'JapanTruth Premiumに加入して限定記事を読む'
-      }
-    }
     document.getElementById('paywall-message').style.display = 'block';
     window.addEventListener('unlockProtocol.status', function(e) {
       if (e.detail.state === 'unlocked') {
@@ -54,13 +40,6 @@ layout: default
         document.getElementById('paywall-message').style.display = 'block';
       }
     });
-  </script>
-  <script>
-    (function(d, s) {
-      var js = d.createElement(s), sc = d.getElementsByTagName(s)[0];
-      js.src="https://paywall.unlock-protocol.com/static/unlock.latest.min.js";
-      sc.parentNode.insertBefore(js, sc);
-    }(document, "script"));
   </script>
   {% else %}
   {{ content }}
