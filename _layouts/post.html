@@ -16,8 +16,51 @@ layout: default
       {% endif %}
     </p>
   </div>
+
+  {% if page.premium %}
+  <!-- プレミアム記事のペイウォール -->
+  <div id="premium-content" style="display:none;">
+    {{ content }}
+  </div>
+  <div id="paywall-message" class="paywall-section">
+    <p class="paywall-lock">🔒</p>
+    <p class="paywall-title">この記事はプレミアム会員限定です</p>
+    <p class="paywall-subtitle">JapanTruth Premiumに加入すると全文を読むことができます</p>
+    <a class="premium-button" href="https://app.unlock-protocol.com/checkout?id=45f1c52a-99b6-4ec9-b699-3cc0bebbd204" target="_blank">
+      プレミアム会員になる — 月額5 USDC
+    </a>
+  </div>
+  <script>
+    var unlockProtocolConfig = {
+      locks: {
+        '0xaD740e0476baf6336d4ac88c4ae322a58b327e75': {
+          network: 8453
+        }
+      },
+      pessimistic: true,
+      skipRecipient: true
+    }
+    window.addEventListener('unlockProtocol.status', function(e) {
+      if (e.detail.state === 'unlocked') {
+        document.getElementById('premium-content').style.display = 'block';
+        document.getElementById('paywall-message').style.display = 'none';
+      } else {
+        document.getElementById('premium-content').style.display = 'none';
+        document.getElementById('paywall-message').style.display = 'block';
+      }
+    });
+  </script>
+  <script>
+    (function(d, s) {
+      var js = d.createElement(s), sc = d.getElementsByTagName(s)[0];
+      js.src="https://paywall.unlock-protocol.com/static/unlock.latest.min.js";
+      sc.parentNode.insertBefore(js, sc);
+    }(document, "script"));
+  </script>
+  {% else %}
   {{ content }}
-  
+  {% endif %}
+
   <!-- Xシェアボタン -->
   <div class="share-section">
     <p class="share-label">この記事をシェアする</p>
