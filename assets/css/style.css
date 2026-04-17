@@ -320,3 +320,40 @@ footer p {
   margin-bottom: 15px;
 }
 
+/* プレミアム会員セクション */
+.premium-section {
+  background: #1a1a1a;
+  padding: 50px 40px;
+  text-align: center;
+  border-top: 4px solid #cc0000;
+  border-bottom: 4px solid #cc0000;
+}
+
+.premium-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.premium-subtitle {
+  color: #aaaaaa;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+.premium-button {
+  display: inline-block;
+  background: #cc0000;
+  color: #ffffff;
+  padding: 15px 40px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.premium-button:hover {
+  background: #aa0000;
+}
