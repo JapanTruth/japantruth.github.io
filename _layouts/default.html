@@ -22,14 +22,7 @@
   <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 100 }}">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="JapanTruth" href="/feed.xml">
-  <!-- Unlock Protocol Paywall -->
-  <script>
-    (function(d, s) {
-      var js = d.createElement(s), sc = d.getElementsByTagName(s)[0];
-      js.src="https://paywall.unlock-protocol.com/static/unlock.latest.min.js";
-      sc.parentNode.insertBefore(js, sc);
-    }(document, "script"));
-  </script>
+  <!-- 1. まずconfigを定義 -->
   <script>
     var unlockProtocolConfig = {
       locks: {
@@ -45,6 +38,14 @@
         default: 'JapanTruth Premiumに加入して限定記事を読む'
       }
     }
+  </script>
+  <!-- 2. その後にUnlockスクリプトを読み込む -->
+  <script>
+    (function(d, s) {
+      var js = d.createElement(s), sc = d.getElementsByTagName(s)[0];
+      js.src="https://paywall.unlock-protocol.com/static/unlock.latest.min.js";
+      sc.parentNode.insertBefore(js, sc);
+    }(document, "script"));
   </script>
 </head>
 <body>
