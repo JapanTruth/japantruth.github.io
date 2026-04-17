@@ -22,9 +22,30 @@
   <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 100 }}">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="JapanTruth" href="/feed.xml">
-  <!-- WalletConnect -->
-  <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
-  <script src="https://unpkg.com/web3@1.9.0/dist/web3.min.js"></script>
+  <!-- Unlock Protocol Paywall -->
+  <script>
+    (function(d, s) {
+      var js = d.createElement(s), sc = d.getElementsByTagName(s)[0];
+      js.src="https://paywall.unlock-protocol.com/static/unlock.latest.min.js";
+      sc.parentNode.insertBefore(js, sc);
+    }(document, "script"));
+  </script>
+  <script>
+    var unlockProtocolConfig = {
+      locks: {
+        '0xaD740e0476baf6336d4ac88c4ae322a58b327e75': {
+          network: 8453,
+          name: 'JapanTruth Premium'
+        }
+      },
+      skipRecipient: true,
+      title: 'JapanTruth Premium',
+      icon: 'https://japantruth.github.io/assets/images/japantruth-nft.png',
+      callToAction: {
+        default: 'JapanTruth Premiumに加入して限定記事を読む'
+      }
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -32,7 +53,7 @@
       <a class="site-title" href="/">Japan<span>Truth</span></a>
       <div class="header-right">
         <span class="header-date">{{ site.time | date: "%Y年%m月%d日" }}</span>
-        <button class="wallet-button" id="wallet-btn" onclick="connectWallet()">
+        <button class="wallet-button" id="wallet-btn" onclick="window.unlockProtocol && window.unlockProtocol.loadCheckoutModal()">
           ウォレット接続
         </button>
         <span class="wallet-address" id="wallet-address" style="display:none;"></span>
@@ -59,9 +80,9 @@
   <div class="premium-section">
     <p class="premium-title">JapanTruth Premium</p>
     <p class="premium-subtitle">有料限定記事へのアクセス権をNFTで取得する</p>
-    <a class="premium-button" href="https://app.unlock-protocol.com/checkout?id=45f1c52a-99b6-4ec9-b699-3cc0bebbd204" target="_blank">
+    <button class="premium-button" onclick="window.unlockProtocol && window.unlockProtocol.loadCheckoutModal()">
       プレミアム会員になる — 月額5ドル
-    </a>
+    </button>
   </div>
   <footer>
     <p><strong>JapanTruth</strong> — 権力に屈しない独立メディア</p>
@@ -70,38 +91,12 @@
     <p class="btc-address">Bitcoin: bc1q3e9ju9pdeurhekjdusqn8cwqr3ft57wtn9j6yp</p>
   </footer>
   <script>
-    var provider;
-    var web3;
-
-    async function connectWallet() {
-      try {
-        provider = new WalletConnectProvider.default({
-          rpc: {
-            8453: 'https://mainnet.base.org'
-          }
-        });
-        await provider.enable();
-        web3 = new Web3(provider);
-        const accounts = await web3.eth.getAccounts();
-        const address = accounts[0];
-        const short = address.slice(0, 6) + '...' + address.slice(-4);
-        document.getElementById('wallet-btn').style.display = 'none';
-        document.getElementById('wallet-address').style.display = 'inline';
-        document.getElementById('wallet-address').textContent = short;
-        localStorage.setItem('walletAddress', address);
-      } catch (e) {
-        console.error(e);
-      }
-    }
-
-    window.addEventListener('load', function() {
-      const saved = localStorage.getItem('walletAddress');
-      if (saved) {
-        const short = saved.slice(0, 6) + '...' + saved.slice(-4);
-        document.getElementById('wallet-btn').style.display = 'none';
-        document.getElementById('wallet-address').style.display = 'inline';
-        document.getElementById('wallet-address').textContent = short;
-      }
+    window.addEventListener('unlockProtocol.authenticated', function(e) {
+      const address = e.detail.address;
+      const short = address.slice(0, 6) + '...' + address.slice(-4);
+      document.getElementById('wallet-btn').style.display = 'none';
+      document.getElementById('wallet-address').style.display = 'inline';
+      document.getElementById('wallet-address').textContent = '🔓 ' + short;
     });
   </script>
 </body>
