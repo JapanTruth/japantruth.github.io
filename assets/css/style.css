@@ -405,3 +405,30 @@ footer p {
 .connect-button:hover {
   background: #eeeeee;
 }
+/* ウォレット接続ボタン */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.wallet-button {
+  background: transparent;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.wallet-button:hover {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.wallet-address {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #cc0000;
+}
